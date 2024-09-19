@@ -5,8 +5,9 @@ resource "aws_instance" "example" {
 
   provisioner "remote-exec" {
     inline = [
-      "sudo apt-get update",
-      "sudo apt-get install -y nginx"
+      "sudo yum update -y",
+      "sudo yum install -y nginx",
+      "sudo systemctl start nginx"
     ]
 
     connection {
