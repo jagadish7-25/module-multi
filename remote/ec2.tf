@@ -18,3 +18,7 @@ resource "aws_instance" "example" {
     }
   }
 }
+
+output "public" {
+  value = aws_instance.example.public_ip
+}
