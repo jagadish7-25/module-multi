@@ -13,7 +13,7 @@ resource "aws_instance" "example" {
     connection {
       type        = "ssh"
       user        = "centos"  # Change based on the AMI you're using
-      private_key = "file.txt"  # Path to your private key
+      private_key = "DevOps321"  # Path to your private key
       host        = self.public_ip
     }
   }
