@@ -13,7 +13,7 @@ resource "aws_instance" "example" {
     connection {
       type        = "ssh"
       user        = "centos"  # Change based on the AMI you're using
-      password   =   file("file.txt")# Path to your private key
+      password   =   file("/root/module-multi/remotefile.txt")# Path to your private key
       host        = self.public_ip # ip address
     }
   }
