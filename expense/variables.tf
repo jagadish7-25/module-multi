@@ -14,7 +14,7 @@ variable "ami" {
 }
 
 variable "sg_id" {
-    type = list()
+    
     default = ["sg-09c956a01686bdc1d"]
   
 }
