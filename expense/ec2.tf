@@ -7,5 +7,8 @@ resource "aws_instance" "expense" {
     tags = {
         Name = each.key
     }
+    provisioner "local-exec" {
+    command = "echo The server's IP address is ${self.private_ip}  > private.ip"
+  }
 }
 
